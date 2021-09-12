@@ -1,0 +1,61 @@
+.menu-login:hover {
+    color: #eb5019 !important ;
+  }
+  
+  .site-main-menu > ul > li > a {
+      font-size: 16px;
+  }
+  
+  .page-banner-section{
+      background-position: top !important; 
+      padding-top: 309px;
+      padding-bottom: 150px;
+  }
+  .page-banner-title .title {
+      font-weight: 600;
+      font-size: 51px;
+      line-height: 51px;
+  }
+  .main-nav {
+      min-height: 40px !important;
+  }
+  .main-nav .header-inner {
+      min-height: 40px !important;
+  }
+  .main-nav .header-logo a img {
+      padding: 10px 0 !important;
+  }
+  .main-nav .header-logo a {
+      max-width: 100px;
+  }
+  .main-nav .site-main-menu > ul > li > a {
+      padding: 19px 17px 15px !important;
+      line-height: 0 !important;
+      font-size: 14px;
+  }
+  .main-nav .site-main-menu .sub-menu li a, .site-main-menu .mega-menu li a{
+      color: #3F3A64 !important;
+  }
+  .main-nav  .header-inner{
+      border-bottom: 1px solid #a5a5a5bf;
+      box-shadow: none;
+  }
+  .main-nav .site-main-menu{
+      display: block;
+  }
+  .main-nav .logo-top{
+      padding-right: 0; 
+  }
+  .header-social a{
+      font-weight: 500;
+      color: #3F3A64 !important;
+  }
+  .main-nav .header-social a{
+      font-weight: 500;
+      color: #696969 !important;
+  }
+  @media (max-width: 768px){
+      .main-nav{
+          display: none;
+      }
+  }

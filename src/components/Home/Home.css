@@ -1,0 +1,64 @@
+.sub-title{
+    color: black;
+}
+
+.card-title{
+    color: darkgray;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.date-div{
+   
+    display: flex;
+    flex-direction:  row;
+    justify-content: space-between;
+}
+td{
+    padding: 4px !important;
+}
+.date-div h6{
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+
+.full-image-card{
+    background-image: url('https://images.unsplash.com/photo-1529790017476-1da550f3273a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80');
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    flex-direction:  column;
+    justify-content: flex-end;
+}
+
+
+.swiper-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-slide{
+    margin-right: 40px;
+}
+.home-courses .view-courses{
+    padding: 0 30px;
+    margin-right: 10px;
+}
+@media (max-width: 600px){
+    .blog-section .card{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }  
+    .section-padding {
+        padding-top: 0 !important;
+        padding-bottom: 60px !important;
+    }
+}
+/*.blog-section .grid-item{
+    margin-bottom: 20px;
+}*/

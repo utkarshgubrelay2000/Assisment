@@ -1,0 +1,13 @@
+.admin-detail-div{
+    display: flex;
+    justify-content: center;
+    /* background-color: rebeccapurple; */
+}
+
+.admin-detail-div ul{
+    list-style-type: none !important;
+}
+
+ul li::marker{
+    display: none !important;
+}
