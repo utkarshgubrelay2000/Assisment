@@ -43,6 +43,11 @@ export const Question = async (data) => {
   const res = await axios.post(`${API_URL}/Question`,data,{headers: { Authorization: `${currentUser.token}` },});
   return res;
 };
+export const DeclareResult = async (data) => {
+  console.log(currentUser)
+  const res = await axios.post(`${API_URL}/result`,data);
+  return res;
+};
 export const setApproved = async (id,data) => {
 
   const res = await axios.put(`${API_URL}/setApproved/${id}`,data,{headers: { Authorization: `${currentUser.token}` },});

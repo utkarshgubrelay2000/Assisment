@@ -7,6 +7,7 @@ import AdminLogin from "./components/Login/Register/AdminLogin";
 import AdminPanel from "./components/Home/AdminPanel";
 import { Question } from "./Api";
 import QuestionPanel from "./components/Home/QuestionPanel";
+import Result from "./components/Home/Result";
 
 function App() {
   const [isUser, setIsUser] = useState(null);
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/admin-quiz" component={AdminPanel} /></>
         :<>
         <Route exact path="/quiz" component={QuestionPanel} />
+        <Route exact path="/result" component={Result} />
           <Route exact path="/adminLogin" component={AdminLogin} />
           <Route exact path="/" component={Login} />
           </>

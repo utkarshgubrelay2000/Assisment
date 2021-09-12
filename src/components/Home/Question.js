@@ -15,9 +15,10 @@ export default function AdminPanel({
   const [option, setOption] = useState(null);
 
   let history = useHistory();
-  console.log(lastPage, questionNumber);
+
   const nextPage = () => {
-    if (answer == option) {
+      console.log(activeQuestion.correctAnswer, option)
+    if (activeQuestion.correctAnswer === option) {
       handleResult(true);
     } else {
       handleResult(false);
@@ -25,13 +26,19 @@ export default function AdminPanel({
     setOption(null);
   };
   const submitHandler = () => {
-    history.push({ pathname: "/result", state: result });
+    if (activeQuestion.correctAnswer === option) {
+     
+        history.push({ pathname: "/result", state: {result:result+1,total:lastPage} });
+      } else {
+        history.push({ pathname: "/result", state: result });
+
+      }
   };
   return (
     <>
       <div class="question">
         <p>
-          Q.{questionNumber + 1} {activeQuestion.question}
+          Q{questionNumber + 1}. {activeQuestion.question}
         </p>
       </div>
       <div class="options-list">
@@ -50,7 +57,7 @@ export default function AdminPanel({
                 }
               >
                 {" "}
-                {index + 1}
+                {index + 1}.
                 {"   "}
                 <span>{item}</span>
               </div>

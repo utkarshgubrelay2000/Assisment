@@ -53,17 +53,16 @@ export default function QuestionPanel({timing=15}) {
   };
   const time = new Date();
  
-   console.log(timer*60,timing)
 
-   time.setSeconds(time.getSeconds()+(history.location.state*60)); 
+   time.setSeconds(time.getSeconds()+(60)); 
   const handleResult=(answer)=>{
 if(answer){
   setResult(result+1)
+  
+  console.log(answer)
 }
 setActiveQuestion(orders[questionNumber+1])
 setQuestionNumber(questionNumber+1)
-  
-console.log(activeQuestion)
   }
   return (
     <Layout>
@@ -87,7 +86,12 @@ function MyTimer({ expiryTimestamp }) {
     hours,
     days,
 
-  } = useTimer({ expiryTimestamp, onExpire: () => alert('Expired') });
+  } = useTimer({ expiryTimestamp, onExpire: () => {alert('Time Up Try Again Next Time')
+  localStorage.removeItem("AssesmentToken")
+
+  window.location.href='/'
+
+} });
 
 
   return (
