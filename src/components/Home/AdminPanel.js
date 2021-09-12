@@ -45,9 +45,9 @@ export default function AdminPanel() {
   const setOrder = async () => {
     let res = await Setquestiondetails(questionDetails);
     console.log(questionDetails, res);
-    alert("Success")
-    handleClose()
-    handlePaper()
+    alert("Success");
+    handleClose();
+    handlePaper();
   };
   const createQuestion = async () => {
     if (question && correctAnswer && answers.length > 0) {
@@ -58,9 +58,9 @@ export default function AdminPanel() {
       };
       let res = await Question(data);
       console.log(questionDetails, res);
-   alert("Success")
-      handleClose()
-      handlePaper()
+      alert("Success");
+      handleClose();
+      handlePaper();
     }
   };
   return (
@@ -199,10 +199,10 @@ export default function AdminPanel() {
         </Modal.Footer>
       </Modal>
       <div className="mr-4 ml-4 text-center">
-        <h2 className="mt-3">Pre Primary Bookings</h2>
+        <h2 className="mt-3">Quiz Question</h2>
         <div className="row m-auto">
           <div className="col-3">
-            <a href="/admin-quiz">
+            <a href="/dashboard">
               <button class="submit" id="start_btn">
                 User
               </button>
@@ -223,9 +223,18 @@ export default function AdminPanel() {
         <div className="container">
           <div
             id="page"
-            className="section mt-5 ml-4 m-auto  "
+            className="section mt-5 ml-4 m-auto row "
             style={{ minHeight: "300px" }}
           >
+            <div className="col-8 m-auto">
+              <input
+                type="search"
+                className="form-control form-control-sm"
+                placeholder="Searching"
+                aria-controls="datatable-buttons"
+                onChange={(e) => setsearchTerm(e.target.value)}
+              />
+            </div>
             <Table striped bordered hover responsive>
               <thead>
                 <tr>
