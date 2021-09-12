@@ -1,189 +1,193 @@
 body{
-    width:100%;
+  width:100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+img{
+    width: 50%;
+}
+.login {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(rgba(57, 159, 242, 0.7), rgba(37, 75, 131, 0.71));
+    position: relative;
+}
+.login_box {
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 22px -8px #0004;
+    display: flex;
+    overflow: hidden;
+}
+.login_box .left{
+  width: 41%;
+  height: 100%;
+  padding: 25px 25px;
+  
+}
+.login_box .right{
+  width: 59%;
+  height: 100%  
+}
+
+.left .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    width: 73%;
+    margin: auto;
+}
+.left h3{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.left input {
+    border: none;
+    width: 80%;
+    margin: 20px 0px;
+    border-bottom: 1px solid #4f30677d;
+    padding: 7px 9px;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+}
+.left{
+    background: linear-gradient(-45deg, #dcd7e0, #fff);
+}
+.submit {
+    border: none;
+    padding: 15px 70px;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+    background: white;
+    color: #583672;
+    font-weight: bold;
+    border: 1px solid #583672;
+    transition-duration: 0.4s;
+}
+
+.submit:hover{
+  cursor: pointer;
+  color: #ffffff;
+  background: #583672;
+  -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+}
+
+
+
+.right {
+    background: linear-gradient(212.38deg, rgba(57, 159, 242, 0.7) 0%, rgba(37, 75, 131, 0.71) 100%),url(https://blog.cengage.com/wp-content/uploads/2020/04/Tips-Online-Exams-1110x380.jpg);
+    color: #fff;
+    position: relative;
+}
+
+.right .right-text{
+  height: 100%;
+  position: relative;
+}
+.right-text h3{
+  display: block;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.right-text ol{
+  display: block;
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 5% ;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  background-color:rgba(57, 159, 242, 0.5) ;
+  border-radius: 10px;
+}
+.right-text li{
+  padding-top: 30px;
+  padding-bottom:20px ;
+  text-align: left;
+  font-size: 25px;
+  color: black;
+}
+.right .right-inductor{
+  position: absolute;
+  width: 70px;
+  height: 7px;
+  background: #fff0;
+  left: 50%;
+  bottom: 70px;
+  transform: translate(-50%, 0%);
+}
+
+@media screen and (max-width:768px){
+  .login{
+    height: 180vh;
   }
-  img{
-      width: 50%;
-  }
-  .login {
-      height: 100vh;
-      width: 100vw;
-      background: radial-gradient(rgba(57, 159, 242, 0.7), rgba(37, 75, 131, 0.71));
-      position: relative;
-  }
-  .login_box {
-      width: 70vw;
-      height: 70vh;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 1px 4px 22px -8px #0004;
-      display: flex;
-      overflow: hidden;
+  .login_box{
+    flex-direction: column;
+    height: 140vh;
   }
   .login_box .left{
-    width: 41%;
-    height: 100%;
-    padding: 25px 25px;
+    width: 100%;
+    height: 50%;
+    padding: 25px 10px;
     
   }
   .login_box .right{
-    width: 59%;
-    height: 100%  
-  }
-  
-  .left .contact{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: center;
-      height: 100%;
-      width: 73%;
-      margin: auto;
-  }
-  .left h3{
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 30px;
+    width: 100%;
+    height: 50%  
   }
   .left input {
-      border: none;
-      width: 80%;
-      margin: 20px 0px;
-      border-bottom: 1px solid #4f30677d;
-      padding: 7px 9px;
-      width: 100%;
-      overflow: hidden;
-      background: transparent;
-      font-weight: 600;
-      font-size: 14px;
-  }
-  .left{
-      background: linear-gradient(-45deg, #dcd7e0, #fff);
-  }
-  .submit {
-      border: none;
-      padding: 15px 70px;
-      border-radius: 8px;
-      display: block;
-      margin: auto;
-      margin-top: 80px;
-      background: white;
-      color: #583672;
-      font-weight: bold;
-      border: 1px solid #583672;
-      transition-duration: 0.4s;
-  }
-  
-  .submit:hover{
-    cursor: pointer;
-    color: #ffffff;
-    background: #583672;
-    -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
-      -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
-      box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
-  }
-  
-  
-  
-  .right {
-      background: linear-gradient(212.38deg, rgba(57, 159, 242, 0.7) 0%, rgba(37, 75, 131, 0.71) 100%),url(https://blog.cengage.com/wp-content/uploads/2020/04/Tips-Online-Exams-1110x380.jpg);
-      color: #fff;
-      position: relative;
-  }
-  
-  .right .right-text{
-    height: 100%;
-    position: relative;
-  }
-  .right-text h3{
-    display: block;
+    border: none;
+    width: 80%;
+    margin: 25px -25px;
+    border-bottom: 1px solid #4f30677d;
+    padding: 7px 9px;
     width: 100%;
-    color: black;
-    text-align: center;
-    font-size: 30px;
+    overflow: hidden;
+    background: transparent;
     font-weight: 600;
-    margin-top: 30px;
-  }
-  .right-text ol{
-    display: block;
-    width: 100%;
-    margin-left: 50px;
-    margin-top: 70px;
-    text-align: center;
-    font-size: 19px;
-    font-weight: 400;
-  }
-  .right-text li{
-    padding-bottom:50px ;
-    text-align: left;
-    font-size: 20px;
-  }
-  .right .right-inductor{
-    position: absolute;
-    width: 70px;
-    height: 7px;
-    background: #fff0;
-    left: 50%;
-    bottom: 70px;
-    transform: translate(-50%, 0%);
-  }
-  
-  @media screen and (max-width:768px){
-    .login{
-      height: 180vh;
-    }
-    .login_box{
-      flex-direction: column;
-      height: 140vh;
-    }
-    .login_box .left{
-      width: 100%;
-      height: 50%;
-      padding: 25px 10px;
-      
-    }
-    .login_box .right{
-      width: 100%;
-      height: 50%  
-    }
-    .left input {
-      border: none;
-      width: 80%;
-      margin: 25px -25px;
-      border-bottom: 1px solid #4f30677d;
-      padding: 7px 9px;
-      width: 100%;
-      overflow: hidden;
-      background: transparent;
-      font-weight: 600;
-      font-size: 14px;
-  }
-  .right-text ol{
-    display: inline-block;
-    width: 50%;
-    margin-left: 30px;
-    margin-top: 50px;
-    text-align: center;
-    font-size: 19px;
-    font-weight: 400;
-  }
-  .submit{
-    margin-top: 70px ;
-    margin-right: 70px;
-  }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    font-size: 14px;
+}
+.right-text ol{
+ 
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 700;
+}
+.submit{
+  margin-top: 70px ;
+  margin-right: 70px;
+}
+}
+
+
+
+
+
+
+
+

@@ -18,6 +18,11 @@ export const getQuestions = async () => {
   const res = await axios.get(`${API_URL}/Questions`,{headers: { Authorization: `${currentUser.token}` },});
   return res;
 };
+export const getApprovedQuestions = async () => {
+ // console.log(currentUser)
+  const res = await axios.get(`${API_URL}/approved-Questions`);
+  return res;
+};
 export const getUsers = async () => {
   console.log(currentUser)
   const res = await axios.get(`${API_URL}/all-users`,{headers: { Authorization: `${currentUser.token}` },});

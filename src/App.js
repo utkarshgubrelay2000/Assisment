@@ -5,6 +5,8 @@ import Login from "./components/Login/Register/Login";
 import ScrollToTop from "react-router-scroll-top";
 import AdminLogin from "./components/Login/Register/AdminLogin";
 import AdminPanel from "./components/Home/AdminPanel";
+import { Question } from "./Api";
+import QuestionPanel from "./components/Home/QuestionPanel";
 
 function App() {
   const [isUser, setIsUser] = useState(null);
@@ -21,7 +23,7 @@ function App() {
           <Route exact path="/dashboard" component={Home} />
           <Route exact path="/admin-quiz" component={AdminPanel} /></>
         :<>
-        <Route exact path="/quiz" component={Home} />
+        <Route exact path="/quiz" component={QuestionPanel} />
           <Route exact path="/adminLogin" component={AdminLogin} />
           <Route exact path="/" component={Login} />
           </>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { loginStudent } from "../../../Api";
+import { getApprovedQuestions, loginStudent } from "../../../Api";
 import { Link, useHistory } from "react-router-dom";
 import Layout from "../../Layout";
 
@@ -37,12 +37,12 @@ export default function Login() {
       const resData = await loginStudent(loginCredentials);
       setshowLoading(false);
 
-      // console.log("Login data", resData);
+       console.log("Login data", resData);
 
       // console.log("token : ", resData.data.token);
 
       var eklavyaStudent = {
-        token: resData.data.token,
+        token: resData.data.data._id,
       };
 
       localStorage.setItem("AssesmentToken", JSON.stringify(eklavyaStudent));
@@ -56,7 +56,13 @@ export default function Login() {
     var currentUser = JSON.parse(localStorage.getItem("AssesmentToken"));
 
     if (currentUser) {
-      window.location.href='/quiz'
+      let res = await getApprovedQuestions();
+      console.log(res);
+    
+      history.push({
+        pathname:'/quiz'
+,        state:res.data.QuestionTime
+      })
     }
   };
 
