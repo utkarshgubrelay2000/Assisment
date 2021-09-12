@@ -92,7 +92,8 @@ body{
   
   
   .right {
-      background: linear-gradient(212.38deg, rgba(57, 159, 242, 0.7) 0%, rgba(37, 75, 131, 0.71) 100%),url(https://blog.cengage.com/wp-content/uploads/2020/04/Tips-Online-Exams-1110x380.jpg);
+      background: linear-gradient(212.38deg, rgba(17, 133, 228, 0.7) 0%, rgba(19, 42, 78, 0.71) 100%),
+      url(https://blog.cengage.com/wp-content/uploads/2020/04/Tips-Online-Exams-1110x380.jpg);
       color: #fff;
       position: relative;
   }

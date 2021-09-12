@@ -58,8 +58,8 @@ export default function AdminLogin() {
 
   return (
     <Layout>
-    	<section class="login">
-		<div class="login_box">
+    	<section class="login row">
+		<div class="login_box ">
 			<div class="left">
 				
 				<div class="contact">
@@ -67,21 +67,9 @@ export default function AdminLogin() {
 						<h3>Admin Signin</h3>
 						<input type="email" placeholder="EMAIL" onChange={(e)=>setemail(e.target.value)}  name="email" required/>
 						<input type="text" placeholder="password" onChange={(e)=>setpassword(e.target.value)}   name="password" required />
-						<button class="submit" id="start_btn" onClick={submitLoginCredentials}>START</button>
+						<button class="submit" id="start_btn" onClick={submitLoginCredentials}>Login</button>
 					</form>
 				</div>
-			</div>
-			<div class="right">
-				<div class="right-text">
-					<h3>RULES <br/> FOR THE ASSESSMENT</h3>
-					<ul>
-						<li>Please enter your correct details.</li>
-						<li>There will be 5 questions in total.</li>
-						<li>Time given for each question is 20 seconds.</li>
-						<li>Result will be shown after the assessment.</li>
-					</ul>
-				</div>
-				
 			</div>
 		</div>
 	</section>

@@ -78,12 +78,12 @@ export default function Login() {
 			<div class="right">
 				<div class="right-text">
 					<h3>RULES <br/> FOR THE ASSESSMENT</h3>
-					<ul>
+          <ol>
 						<li>Please enter your correct details.</li>
 						<li>There will be 5 questions in total.</li>
 						<li>Time given for each question is 20 seconds.</li>
 						<li>Result will be shown after the assessment.</li>
-					</ul>
+					</ol>
 				</div>
 				
 			</div>

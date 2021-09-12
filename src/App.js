@@ -22,8 +22,9 @@ function App() {
           <Route exact path="/admin-quiz" component={AdminPanel} /></>
         :<>
         <Route exact path="/quiz" component={Home} />
+          <Route exact path="/adminLogin" component={AdminLogin} />
           <Route exact path="/" component={Login} />
-          <Route exact path="/adminLogin" component={AdminLogin} /></>
+          </>
         }
 
           {/* <Switch>
