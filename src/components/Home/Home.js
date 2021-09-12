@@ -41,6 +41,16 @@ export default function Home() {
               </button>
             </a>
           </div>
+          <div className="col-6">
+            <a >
+              <button onClick={()=>{
+                localStorage.removeItem('Admin')
+                window.location.href='/'
+              }} class="submit" id="start_btn">
+               Logout
+              </button>
+            </a>
+          </div>
         </div>
 
         <div
