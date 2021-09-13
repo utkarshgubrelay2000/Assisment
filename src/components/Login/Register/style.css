@@ -92,8 +92,7 @@ body{
   
   
   .right {
-      background: linear-gradient(212.38deg, rgba(17, 133, 228, 0.7) 0%, rgba(19, 42, 78, 0.71) 100%),
-      url(https://blog.cengage.com/wp-content/uploads/2020/04/Tips-Online-Exams-1110x380.jpg);
+      background: linear-gradient(212.38deg, rgba(57, 159, 242, 0.7) 0%, rgba(37, 75, 131, 0.71) 100%),url(https://blog.cengage.com/wp-content/uploads/2020/04/Tips-Online-Exams-1110x380.jpg);
       color: #fff;
       position: relative;
   }
@@ -113,17 +112,22 @@ body{
   }
   .right-text ol{
     display: block;
-    width: 100%;
-    margin-left: 50px;
-    margin-top: 70px;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5% ;
+    margin-top: 50px;
     text-align: center;
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 600;
+    background-color:rgba(57, 159, 242, 0.5) ;
+    border-radius: 10px;
   }
   .right-text li{
-    padding-bottom:50px ;
+    padding-top: 10px;
+    padding-bottom:20px ;
     text-align: left;
-    font-size: 20px;
+  
+    color: black;
   }
   .right .right-inductor{
     position: absolute;
@@ -166,13 +170,13 @@ body{
       font-size: 14px;
   }
   .right-text ol{
-    display: inline-block;
-    width: 50%;
-    margin-left: 30px;
-    margin-top: 50px;
+   
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 20px;
     text-align: center;
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 700;
   }
   .submit{
     margin-top: 70px ;

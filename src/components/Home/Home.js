@@ -30,7 +30,7 @@ export default function Home() {
     setorders(res.data.data);
   };
   return (
-    <Layout>
+    <section className=' main-div'>
       <div className="mr-4 ml-4 text-center">
         <h2 className="mt-3">All Users</h2>
         <div className="row">
@@ -51,14 +51,12 @@ export default function Home() {
               </button>
             </a>
           </div>
-        </div>
-
-        <div
+          <div
           id="page"
           className="section mt-5  row"
           style={{ minHeight: "300px" }}
         >
-          <div className="col-8 m-auto">
+             <div style={{marginTop:"5%",marginBottom:"5%" }}className="col-8  ml-auto mr-auto">
             <input
               type="search"
               className="form-control form-control-sm"
@@ -67,6 +65,7 @@ export default function Home() {
               onChange={(e) => setsearchTerm(e.target.value)}
             />
           </div>
+          <div class='container'>
           <Table bordered hover responsive>
             <thead>
               <tr>
@@ -108,7 +107,11 @@ export default function Home() {
             </tbody>
           </Table>
         </div>
+        </div>
+     
+        </div>
+
       </div>
-    </Layout>
+    </section>
   );
 }

@@ -15,10 +15,12 @@ console.log(currentUser)
 declareResult(currentUser)
 },[0])
 const declareResult=async (currentUser)=>{
-  if(currentUser){
+  if(currentUser && history.location.state.result ){
     let data={marks:history.location.state.result,userId:currentUser.token}
     let res=await DeclareResult(data)
     console.log(res)
+  localStorage.removeItem("AssesmentToken")
+
   }
 }
 const TryAgain=()=>{
@@ -27,16 +29,16 @@ const TryAgain=()=>{
 }
   return (
     <Layout>
-        <div class="result">
-        <div class="result_box">
-            <div class="header">
-                <h1>RESULT</h1>
+        <div class="result text-center">
+        <div class="result_box ">
+            <div class="header ">
+                <h3>RESULT</h3>
             </div>
             <div class="result_body">
                <h2>Your Score :</h2>
-               <h1>{history.location.state.result} / {history.location.state.total}</h1>
+               <h1>{history.location.state.result?history.location.state.result:"00"}  {history.location.state.total?"/"+history.location.state.total:""} </h1>
 
-                	<button class="submit" id="start_btn" onClick={TryAgain}>Try Again</button>
+                	<button class="btn btn-primary" id="start_btn" onClick={TryAgain}>Try Again</button>
             </div>
           
         </div>

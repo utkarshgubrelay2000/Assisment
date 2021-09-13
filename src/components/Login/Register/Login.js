@@ -8,7 +8,8 @@ export default function Login() {
   const [email, setemail] = useState("");
   const [name, setname] = useState("");
   const history = useHistory();
-  const [showLoading, setshowLoading] = useState(false);
+  const [questionNumber, setQuestionNumber] = useState(0);
+  const [questionTime,setQuestionTime] = useState(0);
   const [loginError, setloginError] = useState(false);
 
   useEffect(() => {
@@ -18,51 +19,67 @@ export default function Login() {
       history.push("/dashboard");
     }
 
+getQuestion()
     return () => {
       // console.log("Cleanup");
     };
   }, []);
+const getQuestion=async()=>{
 
+  let res = await getApprovedQuestions();
+  console.log(res);
+  setQuestionNumber(res.data.numberOfQuestion)
+  setQuestionTime(res.data.QuestionTime)
+
+}
   const submitLoginCredentials = async (e) => {
     setloginError(false);
-    setshowLoading(true);
+   
     e.preventDefault();
-
-    var loginCredentials = {
-      email,
-      name,
+    const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if(!re.test(String(email).toLowerCase()))
+  {
+    alert("Email not VALID")
+  }
+else if(email && name){
+  var loginCredentials = {
+    email,
+    name,
+  };
+  
+  try {
+    const resData = await loginStudent(loginCredentials);
+   
+    console.log("Login data", resData);
+    
+    // console.log("token : ", resData.data.token);
+    
+    var eklavyaStudent = {
+      token: resData.data.data._id,
     };
-
-    try {
-      const resData = await loginStudent(loginCredentials);
-      setshowLoading(false);
-
-       console.log("Login data", resData);
-
-      // console.log("token : ", resData.data.token);
-
-      var eklavyaStudent = {
-        token: resData.data.data._id,
-      };
-
-      localStorage.setItem("AssesmentToken", JSON.stringify(eklavyaStudent));
-    } catch (e) {
-      // console.log("Login error", e);
-      setloginError(true);
-      setshowLoading(false);
-
-    }
-
+    
+    localStorage.setItem("AssesmentToken", JSON.stringify(eklavyaStudent));
+  } catch (e) {
+    // console.log("Login error", e);
+    setloginError(true);
+  
+  }
+  
+}
     var currentUser = JSON.parse(localStorage.getItem("AssesmentToken"));
 
     if (currentUser) {
       let res = await getApprovedQuestions();
       console.log(res);
-    
+  
       history.push({
         pathname:'/quiz'
 ,        state:res.data.QuestionTime
       })
+    }
+    else{
+      alert("Fill Up Fields")
     }
   };
 
@@ -86,8 +103,8 @@ export default function Login() {
 					<h3>RULES <br/> FOR THE ASSESSMENT</h3>
           <ol>
 						<li>Please enter your correct details.</li>
-						<li>There will be 5 questions in total.</li>
-						<li>Time given for each question is 20 seconds.</li>
+						<li>There will be {questionNumber} questions in total.</li>
+						<li>Total time given for the test is {questionTime}  minutes </li>
 						<li>Result will be shown after the assessment.</li>
 					</ol>
 				</div>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:4000";
+const API_URL = "https://assessment-quiz-backned.herokuapp.com";
 
 var currentUser = JSON.parse(localStorage.getItem("Admin"));
 
@@ -44,7 +44,7 @@ export const Question = async (data) => {
   return res;
 };
 export const DeclareResult = async (data) => {
-  console.log(currentUser)
+ 
   const res = await axios.post(`${API_URL}/result`,data);
   return res;
 };

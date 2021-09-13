@@ -54,7 +54,7 @@ export default function QuestionPanel({timing=15}) {
   const time = new Date();
  
 
-   time.setSeconds(time.getSeconds()+(60)); 
+   time.setSeconds(time.getSeconds()+(history.location.state*60)); 
   const handleResult=(answer)=>{
 if(answer){
   setResult(result+1)
@@ -68,7 +68,7 @@ setQuestionNumber(questionNumber+1)
     <Layout>
    <div class="questions">
    <div class="question_box">
-			<div class="header">
+			<div class="header-ques">
                <div class="heading"><h3>Quiz Assessment</h3></div>
                <div class="timer"> <MyTimer expiryTimestamp={time} /></div>
             </div>

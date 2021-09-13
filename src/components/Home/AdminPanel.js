@@ -64,7 +64,8 @@ export default function AdminPanel() {
     }
   };
   return (
-    <Layout>
+    <section className=' main-div'>
+      
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Question Details</Modal.Title>
@@ -115,7 +116,7 @@ export default function AdminPanel() {
       </Modal>
       <Modal show={paper} onHide={handlePaper}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add Question</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {" "}
@@ -199,8 +200,8 @@ export default function AdminPanel() {
         </Modal.Footer>
       </Modal>
       <div className="mr-4 ml-4 text-center">
-        <h2 className="mt-3">Quiz Question</h2>
-        <div className="row m-auto">
+        <h1 className="mt-3">Quiz Panel</h1>
+        <div style={{justifyContent:'center'}} className="row ">
           <div className="col-3">
             <a href="/dashboard">
               <button class="submit" id="start_btn">
@@ -219,14 +220,13 @@ export default function AdminPanel() {
               Add Question
             </button>
           </div>
-        </div>
-        <div className="container">
+          <div className="container mt-4 ">
           <div
             id="page"
             className="section mt-5 ml-4 m-auto row "
             style={{ minHeight: "300px" }}
           >
-            <div className="col-8 m-auto">
+            <div style={{marginTop:"5%",marginBottom:"5%" }}className="col-8  ml-auto mr-auto">
               <input
                 type="search"
                 className="form-control form-control-sm"
@@ -235,9 +235,9 @@ export default function AdminPanel() {
                 onChange={(e) => setsearchTerm(e.target.value)}
               />
             </div>
-            <Table striped bordered hover responsive>
-              <thead>
-                <tr>
+            <Table className='text-light'  hover responsive>
+              <thead className='text-light' >
+                <tr className='text-light' >
                   <th>Sno.</th>
                   <th>Question</th>
                   <th>correct Option</th>
@@ -265,10 +265,11 @@ export default function AdminPanel() {
 
                         <td>{moment(item.updatedAt).format("MMMM Do YYYY")}</td>
                         <td class="d-flex">
+                     
                           {item.approved ? (
                             <div
                               onClick={async () => {
-                                await setApproved(item._id, { approved: true });
+                                await setApproved(item._id, { approved: false });
                                 getAllOrders();
                               }}
                               class="m-2"
@@ -331,7 +332,10 @@ export default function AdminPanel() {
             </Table>
           </div>
         </div>
+    
+        </div>
+        
       </div>
-    </Layout>
+    </section>
   );
 }

@@ -201,6 +201,9 @@ ul li{
     text-align: left;
     font-size: 20px;
   }
+  .main-div{
+    background:radial-gradient(rgba(57, 159, 242, 0.7), rgba(37, 75, 131, 0.71));
+  }
   .right .right-inductor{
     position: absolute;
     width: 70px;
@@ -211,23 +214,23 @@ ul li{
     transform: translate(-50%, 0%);
   }
   
-  @media screen and (max-width:768px){
+  @media screen and (min-width:768px){
     .login{
-      height: 180vh;
+      height: 100vh;
     }
     .login_box{
-      flex-direction: column;
-      height: 140vh;
+      flex-direction: row;
+      height: 80vh;
     }
     .login_box .left{
       width: 100%;
-      height: 50%;
+    
       padding: 25px 10px;
       
     }
     .login_box .right{
       width: 100%;
-      height: 50%  
+    
     }
     .left input {
       border: none;
@@ -247,7 +250,7 @@ ul li{
     margin-left: 30px;
     margin-top: 50px;
     text-align: center;
-    font-size: 19px;
+   
     font-weight: 400;
   }
   .submit{
@@ -258,7 +261,8 @@ ul li{
   
   
   
-  
+
+
   
   
   

@@ -63,8 +63,9 @@ export default function AdminPanel({
               </div>
             );
           })}
+          
       </div>
-      <div class="footer">
+      <div class="footer" >
         {option ? (
           <>
             {lastPage === questionNumber + 1 ? (
@@ -79,6 +80,7 @@ export default function AdminPanel({
           </>
         ) : null}
       </div>
-    </>
+   
+   </>
   );
 }
