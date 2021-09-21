@@ -68,6 +68,7 @@ export default function AdminPanel({
       <div class="footer" >
         {option ? (
           <>
+          {console.log(questionNumber,lastPage)}
             {lastPage === questionNumber + 1 ? (
               <button class="next" onClick={submitHandler}>
                 Submit

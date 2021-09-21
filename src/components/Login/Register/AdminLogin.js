@@ -66,7 +66,7 @@ export default function AdminLogin() {
 					<form>
 						<h3>Admin Signin</h3>
 						<input type="email" placeholder="EMAIL" class='m-3'onChange={(e)=>setemail(e.target.value)}  name="email" required/>
-						<input type="text" placeholder="password"class='m-3' onChange={(e)=>setpassword(e.target.value)}   name="password" required />
+						<input type="password" placeholder="password"class='m-3' onChange={(e)=>setpassword(e.target.value)}   name="password" required />
 						<button class="submit" id="start_btn" onClick={submitLoginCredentials}>Login</button>
 					</form>
 				</div>

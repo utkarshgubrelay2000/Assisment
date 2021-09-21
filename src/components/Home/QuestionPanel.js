@@ -48,6 +48,7 @@ export default function QuestionPanel({timing=15}) {
     console.log(shuffledArray)
     setActiveQuestion(shuffledArray[0])
     setQuestionNumber(0)
+    console.log(shuffledArray.length)
     setlastPage(shuffledArray.length)
     setTimer(res.data.QuestionTime);
   };
